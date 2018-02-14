@@ -1,0 +1,122 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Noto Sans CJK KR", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  color: #707070;
+}
+
+@media (max-width: 40em) {
+  html, body {
+    font-size: 18px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+select,
+button,
+textarea {
+  font-size: inherit;
+  font-family: "SpoqaHanSans", "Lato", "Noto Sans CJK KR", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.page-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.page-contents {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.page-contents-box {
+  position: relative;
+  margin: 0 auto;
+  padding: 200px 20px;
+  max-width: 1140px;
+  max-height: 622px;
+}
+
+@media (max-width: 40em) {
+  .page-contents-box {
+    padding: 100px 20px;
+  }
+}
+
+.page-title {
+  margin: 0 0 12px;
+  font-size: 2.4em;
+  color: #500CAC;
+}
+
+.page-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 8em;
+  height: auto;
+}
+
+@media (max-width: 40em) {
+  .page-logo {
+    width: 4em;
+  }
+}
+
+.page-links {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+.page-links > li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.page-links > li > a {
+  display: block;
+  width: 16px;
+  height: 16px;
+  text-indent: -10000px;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.link-facebook {
+  background-image: url(../assets/facebook.svg);
+}
+
+.link-twitter {
+  background-image: url(../assets/twitter.svg);
+}
+
+.link-github {
+  background-image: url(../assets/github.svg);
+}
+
+.link-linkedin {
+  background-image: url(../assets/linkedin.svg);
+}
