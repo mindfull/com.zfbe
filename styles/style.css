@@ -174,3 +174,22 @@ textarea {
 .page-hidden {
   display: none;
 }
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background: #141414;
+    color: #ddd;
+  }
+
+  .page-title {
+    color: #8861C6;
+  }
+
+  .page-divider {
+    background-color: #500CAC;
+  }
+
+  .page-desc {
+    color: #fff;
+  }
+}
