@@ -182,11 +182,15 @@ textarea {
   }
 
   .page-title {
-    color: #8861C6;
+    color: #791bfa;
   }
 
   .page-divider {
-    background-color: #500CAC;
+    background-color: #59417b;
+  }
+
+  .page-divider.dimmed {
+    background-color: #444;
   }
 
   .page-desc {
