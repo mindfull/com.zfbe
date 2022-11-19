@@ -6,14 +6,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
     "Noto Sans CJK KR", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  font-size: 20px;
-  color: #707070;
-}
-
-@media (max-width: 40em) {
-  html, body {
-    font-size: 18px;
-  }
+  font-size: 16px;
+  color: #555;
 }
 
 button {
@@ -33,56 +27,102 @@ textarea {
 }
 
 .page-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
 }
 
-.page-contents {
-  display: table-cell;
+.page {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
-  vertical-align: middle;
-}
-
-.page-contents-box {
-  position: relative;
-  margin: 0 auto;
-  padding: 200px 20px;
   max-width: 1140px;
-  max-height: 622px;
+  padding: 50px 40px;
+  margin: 0 auto;
 }
 
 @media (max-width: 40em) {
-  .page-contents-box {
-    padding: 100px 20px;
+  .page {
+    padding: 100px 28px 40px;
   }
 }
 
 .page-title {
-  margin: 0 0 12px;
-  font-size: 2.4em;
+  margin: 0 0 0.2em;
+  font-size: 3rem;
   color: #500CAC;
 }
 
+.page-subtitle {
+  margin: 0 0 0.75em;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.page-job {
+  margin: 0 0 1em;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 40em) {
+  .page-title {
+    font-size: 2.25rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .page-job {
+    font-size: 1.125rem;
+    word-break: keep-all;
+  }
+}
+
+.page-divider {
+  width: 2em;
+  height: 4px;
+  margin: 1.5em 0 1em;
+  border: 0;
+  background-color: #8861C6;
+}
+
+.page-divider.dimmed {
+  background-color: #dadada;
+}
+
 .page-logo {
+  position: relative;
+  height: 250px;
+  margin: 0;
+}
+
+.page-logo img {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  right: 0;
+  bottom: 20px;
   width: 8em;
   height: auto;
 }
 
 @media (max-width: 40em) {
   .page-logo {
+    height: 4em;
+  }
+
+  .page-logo img {
     width: 4em;
   }
 }
 
+.page-desc {
+  max-width: 45em;
+  line-height: 1.5;
+  color: #444;
+}
+
 .page-links {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -90,23 +130,33 @@ textarea {
 }
 
 .page-links > li {
-  display: inline-block;
-  margin-right: 8px;
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1rem;
 }
 
 .page-links > li > a {
-  display: block;
-  width: 16px;
-  height: 16px;
-  text-indent: -10000px;
+  display: inline-block;
+  height: 1.5rem;
+  line-height: 1.5;
+  padding-left: 28px;
   overflow: hidden;
-  background-position: 50% 50%;
-  background-size: contain;
+  color: inherit;
+  background-position: 0 50%;
+  background-size: 18px 18px;
   background-repeat: no-repeat;
+}
+
+.link-blog {
+  background-image: url(../assets/blog.svg);
 }
 
 .link-facebook {
   background-image: url(../assets/facebook.svg);
+}
+
+.link-instagram {
+  background-image: url(../assets/instagram.svg);
 }
 
 .link-twitter {
@@ -119,4 +169,8 @@ textarea {
 
 .link-linkedin {
   background-image: url(../assets/linkedin.svg);
+}
+
+.page-hidden {
+  display: none;
 }
